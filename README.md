@@ -9,7 +9,7 @@
 1. Submit a Pull Request back to the assignment repo
 1. Paste a link to of your Fork on Canvas and submit
 
-## Question 1
+## Question 1 DONE
 
 Write code that prints out all the numbers from 1 to 10 as a single string.
 (Hint: the `String()` function can convert an Int to a String)
@@ -23,7 +23,7 @@ print(String(number), terminator: " ")
 ```
 
 ***
-## Question 2
+## Question 2 DONE
 
 Write code that prints out all the even numbers from 5 to 51 as a single string.
 
@@ -38,7 +38,7 @@ print(String(number), terminator: " ")
 ```
 
 ***
-## Question 3
+## Question 3 DONE
 
 Write code that prints out every number ending in 4 between 1 and 60 as a single string.
 
@@ -53,7 +53,7 @@ print(String(number), terminator: " ")
 ```
 
 ***
-## Question 4
+## Question 4 DONE
 
 Print each character in the string `"Hello world!"`
 
@@ -67,7 +67,7 @@ print(letter)
 ```
 
 ***
-## Question 5
+## Question 5 DONE
 
 Print out the last character in the string below.  You cannot use the Character literal "!" (i.e you must access `myStringSeven`'s characters).
 
@@ -81,7 +81,7 @@ print(myStringSeven.removeLast())
 ```
 
 ***
-## Question 6
+## Question 6 DONE
 
 Write code that switches on a string, given the following conditions:
 - If the string's length is even, print out every character.
@@ -102,11 +102,27 @@ print (element, terminator: "")
 }
 }
 }
+
+//using switch statements
+var string = "Odd or Even"
+
+switch (string.count % 2 == 0) {
+case true:
+for char in string {
+print(char, terminator: "")
+}
+case false:
+for (index, char) in string.enumerated() {
+if index % 2 != 0 {
+print(char, terminator: "")
+}
+}
+}
 ````
 
 
 ***
-## Question 7
+## Question 7 DONE
 
 Initialize a String with a character. Show that it is a Character, and not another String, that you're using to initialize it.
 
@@ -118,7 +134,7 @@ print(Character(string) == Character("a"))
 ```
 
 ***
-## Question 8*****
+## Question 8 DONE
 
 Build five pairs of **canonically equivalent** strings, the first of each being a pre-composed character and the second being one that uses combinable unicode scalars. Show that they are equivalent.
 
@@ -166,7 +182,7 @@ print(hangulGAPrecomposed == hangulGAScalars)
 ```
 
 ***
-## Question 9
+## Question 9 DONE
 
 **Using only Unicode**, print out `"HELLO WORLD!"`
 
@@ -176,7 +192,7 @@ print("\u{0048}\u{0045}\u{004C}\u{004C}\u{004F}\u{0020}\u{0057}\u{004F}\u{0052}\
 ```
 
 ***
-## Question 10
+## Question 10 DONE
 
 **Using only Unicode**, print out your name.
 
@@ -186,7 +202,7 @@ print("\u{0053}\u{0075}\u{006E}\u{006E}\u{0069}")
 ```
 
 ***
-## Question 11
+## Question 11 DONE
 
 **Using only Unicode**, print out `"HELLO WORLD!"` in another language.
 
@@ -196,7 +212,7 @@ print("\u{00A1}\u{0048}\u{006F}\u{006C}\u{0061}\u{0020}\u{004D}\u{0075}\u{006E}\
 ```
 
 ***
-## Question 12
+## Question 12 DONE
 
 Print the below flower box using the following information.
 
@@ -245,7 +261,7 @@ print(upperLowerLines)
 
 
 ***
-## Question 13
+## Question 13 DONE
 
 Write a program that sets up a chess board using Unicode.
 
@@ -289,7 +305,7 @@ print("\u{265C} \u{265E} \u{265D} \u{265B} \u{265A} \u{265D} \u{265E} \u{265C}",
 ```
 
 ***
-## Question 14
+## Question 14 DONE
 
 You are given a string stored in the variable `aString`. Create new string named `replacedString` that contains the characters of the original string with all the occurrences of the character `"e"` replaced by `"\*"`.
 
@@ -308,14 +324,14 @@ Expected values:
 Answer:
 ```swift
 var sentence = "Replace the letter e with *"
-let sentWithoutE = sentence.replacingOccurrences(of: "e", with: "*", options: .literal, range: nil)
+let sentWithoutE = sentence.replacingOccurrences(of: "e", with: "*")
 
 print(sentWithoutE)
 ```
 
 
 ***
-## Question 15
+## Question 15 DONE
 
 You are given a string stored in variable `aString`. Create a new string called `reverse` that contains the original string in reverse order. Print the reversed string.
 
@@ -339,10 +355,20 @@ var aString = "this string has 29 characters"
 var reverse = String(aString.reversed())
 
 print(reverse)
+
+
+//using loops
+var aString = "this string has 29 characters"
+var revString = String()
+
+for char in aString {
+revString = String(char) + revString
+}
+print(revString)
 ```
 
 ***
-## Question 16
+## Question 16 DONE
 
 You are given a string stored in variable `aString`. Print `true` if `aString` is a palindrome, and `false` otherwise. A **palindrome** is a string which reads the same backward or forward.
 
@@ -374,7 +400,7 @@ print(aString == reverse)
 
 
 ***
-## Question 17
+## Question 17 DONE
 
 You are given a string stored in variable `problem`. Write code so that you print each word of the string on a new line.
 
@@ -410,7 +436,7 @@ print(word)
 }
 ```
 ***
-## Question 18
+## Question 18 DONE
 
 You are given a string stored in variable `problem`. Write code that prints the longest word in the string.
 
@@ -442,7 +468,7 @@ print(longestWord)
 ```
 
 ***
-## Question 19
+## Question 19 DONE
 
 Given a string in English, create a tuple containing the number of vowels and consonants.
 
@@ -472,7 +498,7 @@ let tuple = (Vowels: vowelCount, Consonants: conCount)
 print(tuple)
 ```
 ***
-## Question 20
+## Question 20 DONE
 
 Given a string of words separated by a `" "`. Write code that prints out the length of the last word.
 
